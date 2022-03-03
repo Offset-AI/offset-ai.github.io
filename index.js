@@ -84,9 +84,9 @@ function initMap() {
         google.maps.event.addListener(marker, 'click', (function() {
           infowindow.setContent(
           	"<h3>" + sens + "</h3>" + 
-          	"<b>Temp: </b>" + res['M']['temp']['S'] +
-          	"<br><b>Humidity: </b>" + res['M']['humidity']['S'] +
-          	"<br><b>Soil Moisture: </b>" + res['M']['last_soil_moisture']['S']
+          	"<b>Temp (F): </b>" + res['M']['temp']['S'] +
+          	"<br><b>Humidity (%): </b>" + res['M']['humidity']['S'] +
+          	"<br><b>Soil Moisture (%): </b>" + res['M']['last_soil_moisture']['S']
 
           	);
           infowindow.open(map, markersList[markerIndex]);
@@ -276,13 +276,13 @@ Chart.defaults.font.weight = "bold";
 
 var scatterChartData = {
   datasets: [{
-    label: "Temp",
+    label: "Temp (F)",
     backgroundColor: "#6ceae9",
     borderColor: "#6ceae9",
     showLine: true,
     data: [],
   }, {
-    label: "Humidity",
+    label: "Humidity (%)",
     backgroundColor: "#e2dfcc",
     borderColor: "#e2dfcc",
     showLine: true,
@@ -373,7 +373,7 @@ function createDataSets(awsResult) {
 	}
 
 	dataSet.push({
-		label: "Temp",
+		label: "Temp (F)",
 	    backgroundColor: "#6ceae9",
     	borderColor: "#6ceae9",
 	    showLine: true,
