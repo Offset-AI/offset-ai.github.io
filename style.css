@@ -1,0 +1,45 @@
+/* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+#map {
+  height: 50%;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*#leftChart {
+  position: relative; 
+  height:20vh; 
+  width:20vw
+}
+#rightChart {
+  width: 30%;
+}*/
+
+.chart-container{
+	/*position: relative; */
+	/*height:40vh; */
+	width:40%;
+	flex: 1;
+	background-color: #235146;
+	border-radius: 15px;
+	padding: 10px;
+}
+.drop-container{
+	/*position: relative; */
+	/*height:40vh; */
+	width:40%;
+	flex: 1;
+	padding: 10px;
+}
+
+
+
+/* Optional: Makes the sample page fill the window. */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #1e2529;
+}

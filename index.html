@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Offset Ag Portal</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.slim.js"
+  integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY="
+  crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.min.js"></script>
+   
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+
+  </head>
+  <body>
+    <br>
+    <img src="OffsetAILogo.png" style="width: 20%; display: block; margin-left: auto;  margin-right: auto;"> <br>
+    <div style="display: flex;  align-items: center;  justify-content: center">
+      
+        <input type="text" id="fname" name="fname" placeholder="Enter Farm ID" style="border-radius: 4px; height: 25px">
+        <div style="width:10px"></div>
+        <button type="submit" id="GetButton" style="background-color: #e2dfcc;border-radius: 4px;height: 30px">Get Data</button> <br>
+      <br>
+    </div> <br>
+    <div id="map" style="border-radius: 10px;"></div>
+    <br><br>
+
+
+
+    <div id="bottomSection" hidden>
+      <div style="display: flex; width: 75%; margin-left: auto;  margin-right: auto;">
+        <div class="drop-container" >
+          <select name="sensors" id="leftDrop" style="width: 40%;display: block; margin-left: auto;  margin-right: auto;">
+            <option value="" disabled selected>Select sensor</option>
+
+          </select>
+          <!-- <button type="submit" id="leftButton" style="background-color: #e2dfcc;border-radius: 4px;height: 20px">Update Chart</button> -->
+
+        </div>
+        <div style="width:10%">
+          
+        </div>
+        <div class="drop-container" >
+          <select name="sensors" id="rightDrop" style="width: 40%;display: block; margin-left: auto;  margin-right: auto;">
+            <option value="" disabled selected>Select sensor</option>
+          </select>
+          <!-- <button type="submit" id="rightButton" style="background-color: #e2dfcc;border-radius: 4px;height: 20px">Update Chart</button> -->
+        </div>
+      </div>
+      <br>
+      <div style="display: flex; width: 75%; margin-left: auto;  margin-right: auto;">
+        <div class="chart-container" >
+          <canvas id="leftChart"></canvas>
+        </div>
+        <div style="width:10%">
+          
+        </div>
+        <div class="chart-container" >
+          <canvas id="rightChart"></canvas>
+        </div>
+      </div>
+    </div>
+<!--     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      const label = [
+        'January',
+        'February',
+        'March',
+        'April',
+        'May',
+        'June',
+      ];
+
+      const data = {
+        labels: label,
+        datasets: [{
+          label: 'My First dataset',
+          backgroundColor: 'rgb(255, 99, 132)',
+          borderColor: 'rgb(255, 99, 132)',
+          data: [0, 10, 5, 2, 20, 30, 45],
+        }]
+      };
+
+      const config = {
+        type: 'line',
+        data: data,
+        options: {}
+      };
+    </script>
+     -->
+    <script src="./index.js"></script>
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script
+      
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCl_J0Hp2RsTBJNADXyYCOo8DuEL9O79V0&callback=initMap&v=weekly"
+      async
+      defer type="text/javascript"
+    >
+      console.log("yo")
+      TestMarker()
+    </script>
+    <script type="text/javascript">
+      
+    </script>
+  </body>
+</html>
